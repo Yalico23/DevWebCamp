@@ -1,0 +1,36 @@
+/*base*/
+@import 'base/mixins';
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/globales';
+@import 'base/tipografia';
+/*Componenetes*/
+@import 'components/alertas';
+@import 'components/botones';
+@import 'components/sweetAlerts';
+/*UI*/
+@import 'UI/formulario/formulario';
+@import 'UI/formulario/acciones';
+@import 'UI/formulario/hora';
+@import 'UI/header/header';
+@import 'UI/header/barra';
+@import 'UI/header/navegacion';
+@import 'UI/footer/footer';
+/*paginas*/
+@import 'paginas/auth';
+@import 'paginas/devwebcamp';
+@import 'paginas/paquetes';
+@import 'paginas/conferencias';
+@import 'paginas/inicio/resumen';
+@import 'paginas/inicio/speakers';
+@import 'paginas/inicio/mapa';
+@import 'paginas/inicio/boletos';
+@import 'paginas/inicio/404';
+/*admin*/
+@import 'admin/dashboard';
+@import 'admin/table';
+@import 'admin/paginacion';
+@import 'admin/ponentes';
+@import 'admin/bloques';
+/*registr*/
+@import 'registro/registro';

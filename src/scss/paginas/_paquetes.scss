@@ -1,0 +1,41 @@
+.paquetes{
+    padding-bottom: 5rem;
+    &__grid{
+        @include contenedor;
+        @include grid(3,1rem);
+        align-items: flex-start;
+        @include telefono{
+            @include grid(1,3rem);
+        }
+    }
+    &__submit{
+        @include boton($azul, $blanco);
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+}
+
+.paquete{
+    @include card;
+    @include telefono{
+        &:nth-child(2){
+            order: -1;
+        }
+        &:nth-child(3){
+            order: -1;
+        }
+    }
+
+    &__lista{
+        @include resetList;
+        line-height: 2;
+    }
+    &__precio{
+        font-size: 6rem;
+        margin: 3rem 0 0;
+        color: $azul;
+        font-weight: $black;
+        text-align: center;
+    }
+}
+

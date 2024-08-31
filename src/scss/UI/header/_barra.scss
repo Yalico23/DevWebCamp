@@ -1,0 +1,15 @@
+.barra{
+    background-color: $azul;
+    &__contenido{
+        @include contenedor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+    &__logo{
+        @include logo;
+    }
+}

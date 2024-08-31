@@ -1,0 +1,44 @@
+.paginacion{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @include tablet{
+        justify-content: center;
+    }
+
+    &__enlace{
+        color: $azul;
+        font-size: 1.6rem;
+        transition: .3s ease-in-out;
+        &--texto{
+            padding: 1rem;
+            border-radius: .5rem;
+            border: 1px solid $azul;
+        }
+        &:hover{
+            background-color: $azul;
+            color: $blanco;
+        }
+        &--actual{
+            color: $blanco;
+            font-weight: $bold;
+            background-color: $azul;
+            border-radius: 50%;
+            width: 2rem;
+            text-align: center;
+            @include tablet{
+                display: none;
+            }
+        }
+        &--numero{
+            
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+}

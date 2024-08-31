@@ -1,0 +1,50 @@
+.speakers{
+    &__grid{
+        @include contenedor;
+        @include grid(3,5rem);
+        align-items: flex-start;
+        @include tablet{
+            @include grid(2,5rem);
+        }
+        @include telefono{
+            @include grid(1,5rem);
+        }
+    }
+}
+.speaker{
+    @include card;
+    @include shadow;
+    background-position: center top;
+    background-size: 350px;
+    @include tablet{
+        background-size: 300px;
+    }
+    background-repeat: no-repeat;
+    @for $i from 1 through 4{
+        &:nth-child(4n + #{$i}){
+           background-image: url('/build/img/bg_#{$i}.webp');
+        }
+    }
+    &__imagen{
+        @include tablet{
+            //min-width: 350px;
+        }
+    }
+    &__ubicacion{
+        color: $gris;
+        margin: 1rem 0;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    &__skills{
+        @include tags;
+        
+    }
+}
+
+.speaker--sociales{
+    @include menu-social($negro , 3rem);
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}

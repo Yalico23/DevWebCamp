@@ -1,0 +1,14 @@
+.acciones{
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+    &__enlaces{
+        color: $negro;
+        font-size: 1.4rem;
+        font-weight: $delgada;
+    }
+    &--centrar{
+        @extend .acciones;
+        justify-content: center;
+    }
+}

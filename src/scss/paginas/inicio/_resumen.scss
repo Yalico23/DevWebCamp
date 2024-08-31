@@ -1,0 +1,30 @@
+.resumen{
+    background-image: linear-gradient(to right, rgba($azul, .7) , rgba($azul, .9)) , url('/build/img/bg_numeros.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 12rem;
+
+
+    &__grid{
+        @include contenedor;
+        @include grid(2,5rem);
+        @include telefono{
+            @include grid(1,5rem);
+        }
+    }
+    &__bloque{
+        text-align: center;
+        color: $blanco;
+    }
+    &__texto{
+        font-weight: $black;
+        line-height: 1;
+        margin: 0;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        &--numero{
+            font-size: 8rem;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.bloques{
+    @include contenedor;
+    @include tablet{
+        margin-top: 10rem;
+    }
+    &__grid{
+        @include grid(2,3rem);
+        @include telefono{
+            @include grid(1,3rem);
+        }
+    }
+}
+
+.bloque{
+    padding: 3rem;
+    color: $blanco;
+    border-radius: 1rem;
+    &:nth-child(1){
+        background-image:linear-gradient(to left top,#f97316 , lighten(#f97316,15)) ;
+    }
+    &:nth-child(2){
+        background-image:linear-gradient(to left top,#A855F7 , lighten(#A855F7,15)) ;
+    }
+    &:nth-child(3){
+        background-image:linear-gradient(to left top,#65A30D , lighten(#65A30D,15)) ;
+    }
+    &:nth-child(4){
+        background-image:linear-gradient(to left top,#17769E , lighten(#17769E,15)) ;
+    }
+    &__heading{
+        margin: 1rem 0 2rem 0 ;
+        font-size: 3.6rem;
+    }
+    &__texto{
+        margin: 1rem 0;
+        &--cantidad{
+            margin-top: 5rem;
+            font-weight: $bold;
+            font-size: 6rem;
+            text-align: center;
+        }
+    }
+}

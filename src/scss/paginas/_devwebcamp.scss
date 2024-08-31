@@ -1,0 +1,29 @@
+.devwebcamp{
+    background-image: url(/build/img/bg-nosotros.svg);
+    padding-bottom: 5rem;
+    &__grid{
+        @include contenedor;
+        @include grid(2,5rem);
+        align-items: center;
+        @include telefono{
+            @include grid(1,3rem);
+        }
+    }
+
+    &__imagen{
+        source,img{
+            border-radius: 2rem;
+            border: 1rem solid $blanco;
+        }
+    }
+
+    &__contenido{
+        backdrop-filter: blur(5px);
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+
+    &__texto{
+        line-height: 2;
+    }
+}

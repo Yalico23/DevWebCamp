@@ -1,0 +1,43 @@
+.footer{
+    background-color: $azul;
+    padding-top: 3rem;
+    color: $blanco;
+    &__grid{
+        @include contenedor;
+        @include grid(2,3rem);
+        @include tablet{
+            display: block
+        }
+    }
+    &__logo{
+        @include logo;
+        @include texto-fluido(2rem, 4rem);
+    }
+    &__texto{
+        line-height: 2;
+        @include telefono{
+            text-align: center;
+        }
+    }
+    &__copyright{
+        background-color: darken($azul, 10);
+        margin: 3rem 0 0 0;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: $black;
+        &--regular{
+            font-weight: $regular;
+        }
+    }
+}
+.menu-redes{
+    @include menu-social($blanco, 2rem);
+    display: flex;
+    gap: 2rem;
+    margin: 4rem 0;
+    justify-content: flex-end;
+    @include tablet{
+        justify-content: center;
+    }
+}

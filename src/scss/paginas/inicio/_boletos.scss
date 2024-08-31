@@ -1,0 +1,125 @@
+.boletos {
+  &__grid {
+    @include contenedor-sm;
+    @include grid(1, 5rem);
+  }
+}
+
+.boleto {
+  width: min(100% - 5rem, 65rem);
+  margin: 2rem auto;
+  padding: 6rem;
+  border-radius: 2rem;
+  color: $blanco;
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $blanco;
+    width: 5rem;
+    height: 5rem;
+    top: calc(50% - 2.5rem);
+    // posicion 50% - por el valor del height
+  }
+  &::before {
+    clip-path: circle(50% at 25% 50%);
+    //recorte - poscion X - posicion Y
+    left: 0;
+  }
+  &::after {
+    clip-path: circle(50% at 75% 50%);
+    right: 0;
+  }
+  &--presencial {
+    background-color: hsla(209, 100%, 47%, 1);
+    background-image: radial-gradient(
+        at 55% 30%,
+        hsla(209, 100%, 47%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 34% 58%, hsla(178, 100%, 39%, 1) 0px, transparent 50%),
+      radial-gradient(at 39% 90%, hsla(209, 100%, 47%, 1) 0px, transparent 50%),
+      radial-gradient(at 86% 76%, hsla(178, 100%, 39%, 1) 0px, transparent 50%);
+  }
+  &--virtual {
+    background-color: $secundario;
+  }
+  &--gratis {
+    background-color: $azul;
+  }
+  &__logo {
+    @include logo;
+    @include texto-fluido(2rem, 4rem);
+  }
+  &__plan {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 3rem 0 0 0;
+  }
+  &__precio {
+    margin: 3rem 0 0 0;
+    font-size: 4rem;
+    font-weight: $black;
+  }
+  &__enlace-contenedor {
+    display: flex;
+    justify-content: center;
+  }
+  &__enlace {
+    @include boton($azul, $blanco);
+  }
+  $modificador: &;
+
+  &--acceso {
+    height: 30rem;
+    @include telefono {
+      width: 30rem;
+      height: 50rem;
+      padding: 10rem 3rem;
+      text-align: center;
+    }
+    #{$modificador}__logo {
+      @include texto-fluido(2rem, 2.8rem);
+      margin: 0;
+    }
+    #{$modificador}__nombre {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      font-weight: $black;
+    }
+    #{$modificador}__codigo {
+      position: absolute;
+      font-size: 4rem;
+      font-weight: $bold;
+      text-align: center;
+      rotate: 90deg;
+      transform-origin: 0 0;//googlear
+      top: 0;
+      left: calc(100% - 5rem);
+      @include telefono {
+        rotate: 0deg;
+        bottom: 7rem;
+        margin: 0;
+        left: 0;
+        width: 100%;
+        top: unset;
+      }
+    }
+    &::before {
+      @include telefono {
+        clip-path: circle(50% at 50% 25%);
+        //recorte - poscion X - posicion Y
+        left: calc(50% - 2.5rem);
+        top: 0;
+      }
+    }
+    &::after {
+      @include telefono {
+        clip-path: circle(50% at 50% 75%);
+        left: calc(50% - 2.5rem);
+        top: calc(100% - 5rem);
+      }
+    }
+  }
+}

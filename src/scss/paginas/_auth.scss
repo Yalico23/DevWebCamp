@@ -1,0 +1,6 @@
+.auth{
+    @include contenedor-sm;
+    &__texto{
+        font-size: 2rem;
+    }
+}

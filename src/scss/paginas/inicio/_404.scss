@@ -1,0 +1,12 @@
+.pagina_404{
+    &__contenedor{
+        text-align: center;
+    }
+
+    &__enlace{
+        @include boton($azul, $blanco);
+        display: flex;
+        display: inline-block;
+        margin: 1rem 0 3rem 0;
+    }
+}

@@ -1,0 +1,29 @@
+.horas{
+    width: 100%;
+    @include resetList;
+        @include grid(2,1rem);
+        @include telefono{
+            display: block;
+        }
+    &__hora{
+        color: $azul;
+        border: 1px solid $azul;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+        cursor: pointer;
+        
+        &--seleccionado{
+            background-color: $azul;
+            color: $blanco;
+            font-weight: $negro;
+        }
+
+        &--deshabilitado{
+            cursor: not-allowed;
+            border: 1px solid $gris;
+            color: $gris;
+            opacity: .5;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.listado-ponentes{
+    @include resetList;
+    @include grid(1,1rem);
+    width: 100%;
+    margin-top: 1rem;
+
+    &__ponente{
+        color: $azul;
+        padding: 1rem;
+        border: 1px solid $azul;
+        border-radius: 1rem;
+        text-align: center;
+        transition: .3s ease;
+        &:hover{
+            cursor: pointer;
+            background-color: lighten($azul , 20);
+            color: $blanco;
+            font-weight: $black;
+        }
+
+        &--seleccionado{
+            background-color: $azul;
+            color: $blanco;
+            font-weight: $black;
+        }
+    }
+}

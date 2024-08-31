@@ -1,0 +1,24 @@
+.alerta {
+    padding: 1rem 1rem 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    max-width: 80rem;
+  
+    &__error {
+      background-color: lighten($rojo, 60%);
+      border-left: .5rem solid $rojo;
+      color: $rojo;
+    }
+    &__exito {
+      background-color: lighten($verde, 50%);
+      border-left: .5rem solid $verde;
+      color: $verde;
+    }
+}
+
+//para validar alertas de js
+.divAlertas{
+    margin: 1rem auto;
+}

@@ -1,0 +1,21 @@
+.navegacion{
+    display: flex;
+    align-items: center;
+    @include tablet{
+        flex-direction: column;
+        text-align: center;
+    }
+    &__enlace{
+        color: $blanco;
+        font-size: 1.8rem;
+        padding: 2rem;
+        font-weight: $black;
+        text-transform: uppercase;
+        transition: .3s ease;
+        &:hover,
+        &--fijo{
+            background-color: $blanco;
+            color: $azul;
+        }
+    }
+}

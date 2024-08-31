@@ -1,0 +1,101 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    &__fieldset{
+        border: none;
+        margin-top: 1rem;
+        padding: 0;
+    }
+    &__legend{
+        color: $gris;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    &__campo{
+        display: flex;
+        align-items: center;
+        margin: 1.5rem 0;
+        position: relative;
+        &--encima{
+            flex-direction: column;
+        }
+    }
+    &__label{
+        flex: 0 0 10rem;
+        font-size: 1.8rem;
+        color: rgb($negro , .8);
+        &--encima{
+            align-self: flex-start;
+            flex: 0 0 4rem;
+        }
+    }
+    &__input{
+        padding: 1rem;
+        border: 1px solid darken($gris-claro , 20%);
+        border-radius: .5rem;
+        width: 100%;
+        outline: none;
+        &--file{
+            border: none;
+        }
+        &--sociales{
+            border-top-left-radius:0; 
+            border-bottom-left-radius:0; 
+        }
+        &--textarea{
+            resize: none;
+            height: 10rem
+        }
+    }
+    &__radio{
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        &--opciones{
+            //ver como alinear
+        }
+    }
+    &__submit{
+        @include boton($azul , $blanco);
+        width: auto;
+        align-self: flex-start;
+        &--registrar{
+            margin: 1rem 0 0 0;
+            width: 100%;
+        }
+    }
+    &__icon{//en login
+        position: absolute;
+        right: 0;
+        margin-right:.5rem;
+        cursor: pointer;
+    }
+    &__contenedor--icono{
+        display: flex;
+        border-radius: .5rem;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+    &__icono{//ponenetes
+        background-color: $gris-oscuro;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            color: $blanco;
+            font-size: 2rem;
+        }
+    }
+    &__listado{
+        @include tags;
+    }
+    &__imagen{
+        img{
+            max-width: 20rem;
+        }
+    }
+    &__texto{
+        margin-top: 3rem;
+    }
+}

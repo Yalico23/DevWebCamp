@@ -1,0 +1,116 @@
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $gris-claro;
+
+  &__header {
+    background-color: $gris-oscuro;
+    padding: 2rem;
+  }
+  &__header--grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include telefono {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    @include logo;
+    @include texto-fluido(2rem, 3rem);
+  }
+  &__submit--logout {
+    @include enlace;
+  }
+  //
+  &__grid {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+  }
+  //asidebar
+  &__sidebar {
+    background-color: lighten($gris-oscuro, 10);
+    width: 12rem;
+  }
+  &__menu {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__enlace {
+    color: lighten($gris-oscuro, 40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    padding: 2rem;
+    &:hover,
+    &--actual {
+      background-color: lighten($gris-oscuro, 20);
+      color: $blanco;
+    }
+  }
+  &__icono {
+    font-size: 2rem;
+  }
+  &__menu--texto {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: $bold;
+    margin-top: 0.5rem;
+  }
+  //contenido
+  &__contenido {
+    width: 100%;
+    padding: 1rem 5rem 3rem 5rem;
+    overflow: scroll;
+    @include tablet {
+      padding: 1rem 1rem 3rem 1rem;
+    }
+    &::-webkit-scrollbar {
+      width: 1.2rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #007df4;
+      border-radius: 10px;
+      border: 3px solid #ffffff;
+    }
+  }
+  //
+  &__contenedor--boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+  }
+  &__boton {
+    @include boton($azul, $blanco);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    width: auto;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__contenedor {
+    @include shadow;
+    background-color: $blanco;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  &__formulario {
+    @extend .dashboard__contenedor;
+    @include contenedor-md;
+  }
+
+  &__grafico{
+    @include contenedor-md;
+  }
+}

@@ -1,0 +1,58 @@
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    &__thead{
+        background-color: $gris-oscuro;
+        color: $blanco;
+    }
+    &__tr{
+        &:nth-of-type(even){
+            background-color: $gris-claro;
+        }
+    }
+    &__th{
+        padding: 1rem;
+        text-align: left;
+    }
+    &__td{
+        padding: 1.5rem 1rem;
+        &--acciones{
+            //all: unset; -- Solo cuando se usa datatables
+            @extend .table__td;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            align-items: center;
+            li{//por el dattable
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &__accion{
+        all: unset;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: $bold;
+        cursor: pointer;
+        &--editar{
+            color: $azul;
+            @include telefono{
+                display: block;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+        &--eliminar{
+            color: $rojo;
+            @include telefono{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}
+
